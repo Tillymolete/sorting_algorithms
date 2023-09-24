@@ -12,7 +12,7 @@
 
 void swap_points(listint_t **head, listint_t **point1, listint_t **point2)
 {
-	listint *i, *j;
+	listint_t *i, *j;
 
 	i = *point1;
 	j = *point2;
@@ -40,21 +40,21 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *temp;
 
-	if (list == NULL || *list == NULL || (*list)->temp == NULL)
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	current = (*list)->temp;
+	current = (*list)->next;
 	while (current != NULL)
 	{
-		prev = current->prev;
-		while (prev != NULL)
+		temp = current->prev;
+		while (temp != NULL)
 		{
-			if (prev->temp->n < prev->n)
+			if (temp->next->n < temp->n)
 			{
-				swap_points(list, &prev, &prev->next);
+				swap_points(list, &temp, &temp->next);
 				print_list((*list));
 			}
-			prev = prev->prev;
+			temp = temp->prev;
 		}
 		current = current->next;
 	}
