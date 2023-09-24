@@ -27,9 +27,10 @@ void quick_sort(int *array, size_t size);
 
 /* swapping prototypes */
 void swap(int *array_x, int *array_y);
+void swap_points(listint_t **head, listint_t **point1, listint_t **point2);
 
 /* helper prototype functions */
-
+void print_list(const list_t *list);
 void print_array(const int *array, size_t size);
 
 #endif /* SORT_H */
