@@ -1,3 +1,5 @@
+#ifndef SORT_H
+#define SORT_H
 
 #include <stdbool.h>
 #include <stdlib.h>
@@ -25,4 +27,5 @@ void quick_sort(int *array, size_t size);
 
 /* swapping prototypes */
 void swap(int *array_x, int *array_y);
-#endif
+
+#endif /* SORT_H */
