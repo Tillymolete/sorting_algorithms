@@ -33,4 +33,8 @@ void swap_points(listint_t **head, listint_t **point1, listint_t **point2);
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 
+/* lomuto prototype function */
+void recursive_quick_sort(int *array, size_t size, int low, int high);
+int lomuto_partition(int *array, size_t size, int low, int high);
+
 #endif /* SORT_H */
